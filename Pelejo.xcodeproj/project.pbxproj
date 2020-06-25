@@ -17,6 +17,9 @@
 		8602C7B224A42947002F963A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8602C7B024A42947002F963A /* LaunchScreen.storyboard */; };
 		8602C7BD24A42947002F963A /* PelejoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7BC24A42947002F963A /* PelejoTests.swift */; };
 		8602C7C824A42948002F963A /* PelejoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7C724A42948002F963A /* PelejoUITests.swift */; };
+		8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7D524A44125002F963A /* InitialPageViewController.swift */; };
+		8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */; };
+		8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DD24A44506002F963A /* ChaptersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		8602C7C324A42948002F963A /* PelejoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PelejoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8602C7C724A42948002F963A /* PelejoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelejoUITests.swift; sourceTree = "<group>"; };
 		8602C7C924A42948002F963A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8602C7D524A44125002F963A /* InitialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
+		8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryViewController.swift; sourceTree = "<group>"; };
+		8602C7DD24A44506002F963A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 				8602C7AE24A42947002F963A /* Assets.xcassets */,
 				8602C7B024A42947002F963A /* LaunchScreen.storyboard */,
 				8602C7B324A42947002F963A /* Info.plist */,
+				8602C7D524A44125002F963A /* InitialPageViewController.swift */,
+				8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */,
+				8602C7DD24A44506002F963A /* ChaptersViewController.swift */,
 			);
 			path = Pelejo;
 			sourceTree = "<group>";
@@ -269,7 +278,10 @@
 			files = (
 				8602C7A824A42946002F963A /* GameScene.swift in Sources */,
 				8602C7AA24A42946002F963A /* GameViewController.swift in Sources */,
+				8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */,
+				8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */,
 				8602C7A224A42946002F963A /* AppDelegate.swift in Sources */,
+				8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
