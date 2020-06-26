@@ -20,6 +20,8 @@
 		8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7D524A44125002F963A /* InitialPageViewController.swift */; };
 		8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */; };
 		8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DD24A44506002F963A /* ChaptersViewController.swift */; };
+		A7C5D93324A5A6B2006E309F /* Underdog-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7C5D93124A5A6B2006E309F /* Underdog-Regular.ttf */; };
+		A7C5D93424A5A6B2006E309F /* Xilo-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7C5D93224A5A6B2006E309F /* Xilo-Sans.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		8602C7D524A44125002F963A /* InitialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
 		8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryViewController.swift; sourceTree = "<group>"; };
 		8602C7DD24A44506002F963A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		A7C5D93124A5A6B2006E309F /* Underdog-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Underdog-Regular.ttf"; path = "../../../../Downloads/Underdog/Underdog-Regular.ttf"; sourceTree = "<group>"; };
+		A7C5D93224A5A6B2006E309F /* Xilo-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Xilo-Sans.ttf"; path = "../../../../Downloads/Underdog/Xilo-Sans.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		8602C7A024A42946002F963A /* Pelejo */ = {
 			isa = PBXGroup;
 			children = (
+				A7C5D93024A5A684006E309F /* Fonts */,
 				8602C7A124A42946002F963A /* AppDelegate.swift */,
 				8602C7A324A42946002F963A /* GameScene.sks */,
 				8602C7A524A42946002F963A /* Actions.sks */,
@@ -141,6 +146,15 @@
 				8602C7C924A42948002F963A /* Info.plist */,
 			);
 			path = PelejoUITests;
+			sourceTree = "<group>";
+		};
+		A7C5D93024A5A684006E309F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A7C5D93124A5A6B2006E309F /* Underdog-Regular.ttf */,
+				A7C5D93224A5A6B2006E309F /* Xilo-Sans.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +263,9 @@
 			files = (
 				8602C7AD24A42946002F963A /* Main.storyboard in Resources */,
 				8602C7A424A42946002F963A /* GameScene.sks in Resources */,
+				A7C5D93424A5A6B2006E309F /* Xilo-Sans.ttf in Resources */,
 				8602C7AF24A42947002F963A /* Assets.xcassets in Resources */,
+				A7C5D93324A5A6B2006E309F /* Underdog-Regular.ttf in Resources */,
 				8602C7B224A42947002F963A /* LaunchScreen.storyboard in Resources */,
 				8602C7A624A42946002F963A /* Actions.sks in Resources */,
 			);
