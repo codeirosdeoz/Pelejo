@@ -27,12 +27,14 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
-        fabiano.loadTextureArray(folderName: "WalkFabFront", numberOfTextures: 6)
+        fabiano.loadFrontWalkTextureArray(folderName: "WalkFabFront", numberOfTextures: 6)
+        fabiano.loadBackWalkTextureArray(folderName: "WalkFabBack", numberOfTextures: 6)
     }
     
     func moveFabiano(swipe:UISwipeGestureRecognizer){
         if swipe.direction == .left{
             fabiano.moveElementLeft()
+            fabiano.animamteBackWalk()
         }else if swipe.direction == .right{
             fabiano.moveElementRight()
             fabiano.animamteFrontWalk()
