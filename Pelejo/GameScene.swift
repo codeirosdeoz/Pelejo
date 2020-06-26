@@ -19,9 +19,18 @@ class GameScene: SKScene {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
+    let cameraNode = SKCameraNode()
+    
     override func sceneDidLoad() {
         
         self.lastUpdateTime = 0
+        
+        
+        cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,
+                                         y: fabiano.elementBody.position.y)
+        //adding camera to scene
+        addChild(cameraNode)
+        self.camera = cameraNode
         
     }
     
@@ -39,10 +48,22 @@ class GameScene: SKScene {
             fabiano.moveElementRight()
             fabiano.animamteFrontWalk()
         }
+        
+        //Updating position of camera acording with Fabiano's movement
+        UpdateCamera()
     }
     
     func jumpFabiano(){
         fabiano.jumpMoviment()
     }
+    
+    func UpdateCamera(){
+        
+        //Chaning x position of camera
+        self.camera?.position = CGPoint(x: max(fabiano.elementBody.position.x,0), y: 0.0)
+        
+        
+    }
 }
+
 
