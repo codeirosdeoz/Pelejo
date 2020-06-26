@@ -50,6 +50,10 @@
                                 <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="O3u-t6-dT0">
+                                <rect key="frame" x="-173" y="-109" width="422" height="288"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
@@ -189,10 +193,6 @@
                                 <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="house" translatesAutoresizingMaskIntoConstraints="NO" id="z99-DI-fvO">
-                                <rect key="frame" x="-46" y="169" width="627" height="262"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cordel_overlay" translatesAutoresizingMaskIntoConstraints="NO" id="c6d-Jr-fZD">
                                 <rect key="frame" x="533" y="0.0" width="363" height="414"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -218,19 +218,19 @@ Que abrigo oferecia</string>
                                 <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IML-fk-0fQ">
-                                <rect key="frame" x="699" y="349" width="129" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="17"/>
-                                <state key="normal" image="button"/>
-                                <connections>
-                                    <segue destination="zWG-8f-kO6" kind="show" id="alR-OO-WTj"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fe1-Ar-B6a">
                                 <rect key="frame" x="719" y="357" width="89" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IML-fk-0fQ">
+                                        <rect key="frame" x="-20" y="-10" width="129" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="17"/>
+                                        <state key="normal" image="button"/>
+                                        <connections>
+                                            <segue destination="zWG-8f-kO6" kind="show" id="alR-OO-WTj"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Continuar  -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq9-7n-Jc3">
                                         <rect key="frame" x="0.0" y="-3" width="100" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -247,6 +247,10 @@ Que abrigo oferecia</string>
                                     </label>
                                 </subviews>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="farm" translatesAutoresizingMaskIntoConstraints="NO" id="z99-DI-fvO">
+                                <rect key="frame" x="-46" y="171" width="596" height="262"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gj7-bY-oas"/>
@@ -280,8 +284,9 @@ Que abrigo oferecia</string>
         <image name="cloth" width="105" height="45"/>
         <image name="cloth_dark" width="178" height="76"/>
         <image name="cordel_overlay" width="446" height="510"/>
-        <image name="house" width="277" height="114"/>
+        <image name="farm" width="7161" height="2942"/>
         <image name="number_1" width="18" height="48"/>
         <image name="path" width="883" height="285"/>
+        <image name="sun" width="1092" height="1092"/>
     </resources>
 </document>
