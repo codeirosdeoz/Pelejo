@@ -32,12 +32,12 @@ class CharachterSceneElement{
     func loadTextureArray(folderName:String, numberOfTextures:Int){
         
         for i in 0..<numberOfTextures{
-            animationTextures.append(SKTexture(imageNamed: folderName + String(i)))
+            animationTextures.append(SKTexture(imageNamed:"WalkFabFront/\(i)" ))
         }
     }
     
-    func animamteWalk(){
-        
+    func animamteFrontWalk(){
+        elementBody.run(SKAction.animate(with: animationTextures, timePerFrame: 0.1))
     }
 }
 

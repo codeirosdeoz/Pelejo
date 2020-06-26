@@ -65,8 +65,8 @@
 		8602C7D524A44125002F963A /* InitialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
 		8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryViewController.swift; sourceTree = "<group>"; };
 		8602C7DD24A44506002F963A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
-		A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Underdog-Regular.ttf"; sourceTree = "<group>"; };
-		A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Xilo-Sans.ttf"; sourceTree = "<group>"; };
+		A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Underdog-Regular.ttf"; path = "Pelejo/Fonts/Underdog-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Xilo-Sans.ttf"; path = "Pelejo/Fonts/Xilo-Sans.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

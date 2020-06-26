@@ -10,7 +10,7 @@ import SpriteKit
 
 class MovimentClass{
     
-    public var xMovimentVariation:CGFloat = 50
+    public var xMovimentVariation:CGFloat = 150
     public var yJumpVariation:CGFloat = 400
     public var interval:TimeInterval = 0.5
     
