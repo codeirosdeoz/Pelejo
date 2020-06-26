@@ -9,9 +9,9 @@ on:
 jobs:
   build:
     runs-on: macOS-latest
-    
+
     steps:
-      uses: actions/checkout@v1
+    - uses: actions/checkout@v1
     - name: Select Xcode 11
       run: sudo xcode-select -switch /Applications/Xcode_11.5.app
     - name: Perform build
