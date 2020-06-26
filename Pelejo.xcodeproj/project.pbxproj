@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28FA554724A5AB020077747D /* MovimentClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA554624A5AB020077747D /* MovimentClass.swift */; };
+		28FA554924A5AB470077747D /* CharachterSceneElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FA554824A5AB470077747D /* CharachterSceneElement.swift */; };
 		8602C7A224A42946002F963A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7A124A42946002F963A /* AppDelegate.swift */; };
 		8602C7A424A42946002F963A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8602C7A324A42946002F963A /* GameScene.sks */; };
 		8602C7A624A42946002F963A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8602C7A524A42946002F963A /* Actions.sks */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28FA554624A5AB020077747D /* MovimentClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentClass.swift; sourceTree = "<group>"; };
+		28FA554824A5AB470077747D /* CharachterSceneElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharachterSceneElement.swift; sourceTree = "<group>"; };
 		8602C79E24A42946002F963A /* Pelejo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pelejo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8602C7A124A42946002F963A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8602C7A324A42946002F963A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				8602C7D524A44125002F963A /* InitialPageViewController.swift */,
 				8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */,
 				8602C7DD24A44506002F963A /* ChaptersViewController.swift */,
+				28FA554624A5AB020077747D /* MovimentClass.swift */,
+				28FA554824A5AB470077747D /* CharachterSceneElement.swift */,
 			);
 			path = Pelejo;
 			sourceTree = "<group>";
@@ -277,8 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8602C7A824A42946002F963A /* GameScene.swift in Sources */,
+				28FA554724A5AB020077747D /* MovimentClass.swift in Sources */,
 				8602C7AA24A42946002F963A /* GameViewController.swift in Sources */,
 				8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */,
+				28FA554924A5AB470077747D /* CharachterSceneElement.swift in Sources */,
 				8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */,
 				8602C7A224A42946002F963A /* AppDelegate.swift in Sources */,
 				8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */,
