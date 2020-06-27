@@ -25,7 +25,6 @@ class GameScene: SKScene {
         
         self.lastUpdateTime = 0
         
-        
         cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,
                                          y: fabiano.elementBody.position.y)
         //adding camera to scene
@@ -49,21 +48,39 @@ class GameScene: SKScene {
             fabiano.animamteFrontWalk()
         }
         
-        //Updating position of camera acording with Fabiano's movement
-        UpdateCamera()
+       // UpdateCamera()
     }
     
     func jumpFabiano(){
         fabiano.jumpMoviment()
     }
     
-    func UpdateCamera(){
+    
+    
+    override func update(_ currentTime: TimeInterval) {
         
-        //Chaning x position of camera
-        self.camera?.position = CGPoint(x: max(fabiano.elementBody.position.x,0), y: 0.0)
+        let xPos = clamping(num:fabiano.elementBody.position.x , min: 0, max: 5825)
         
+        cameraNode.position = CGPoint(x: xPos , y: 0.0)
         
+       
     }
+    
+    
+    func clamping(num: CGFloat, min: CGFloat, max: CGFloat) -> CGFloat{
+        
+        var result = num
+        if(num>max){
+            result = max
+        }else{
+            if(result<min){
+                result = min
+            }
+        }
+        
+        return result
+    }
+
 }
 
 
