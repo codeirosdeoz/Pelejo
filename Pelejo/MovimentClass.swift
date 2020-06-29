@@ -15,11 +15,11 @@ class MovimentClass{
     public var interval:TimeInterval = 0.5
     
     func moveLeft(body:SKNode){
-        body.run(SKAction.move(by: CGVector(dx: -xMovimentVariation, dy: 0), duration: interval), withKey: "Left")
+        body.run(SKAction.repeatForever(SKAction.move(by: CGVector(dx: -xMovimentVariation, dy: 0), duration: interval)), withKey: "Left")
     }
     
     func moveRight(body:SKNode){
-        body.run(SKAction.move(by: CGVector(dx: xMovimentVariation, dy: 0), duration: interval), withKey: "Right")
+        body.run(SKAction.repeatForever(SKAction.move(by: CGVector(dx: xMovimentVariation, dy: 0), duration: interval)), withKey: "Right")
     }
     
     func stopMovimentForKey(body:SKNode, movimentKey:String){

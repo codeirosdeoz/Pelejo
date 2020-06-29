@@ -48,21 +48,25 @@ class GameScene: SKScene {
             fabiano.animamteFrontWalk()
         }
         
-       // UpdateCamera()
+    }
+    
+    func stopFabiano(){
+        if fabiano.rightMoviment == true{
+            fabiano.stopAnimate(key: "Right")
+        }else{
+            fabiano.stopAnimate(key: "Left")
+        }
     }
     
     func jumpFabiano(){
         fabiano.jumpMoviment()
     }
     
-    
-    
     override func update(_ currentTime: TimeInterval) {
         
         let xPos = clamping(num:fabiano.elementBody.position.x , min: 0, max: 5825)
         
         cameraNode.position = CGPoint(x: xPos , y: 0.0)
-        
        
     }
     
