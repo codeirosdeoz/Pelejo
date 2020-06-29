@@ -12,7 +12,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    var scene = GKScene()
+    //var scene = GKScene()
     var sceneNode = GameScene()
     
     override func viewDidLoad() {
@@ -29,22 +29,38 @@ class GameViewController: UIViewController {
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(tap)
         
-        scene = GKScene(fileNamed: "GameScene")!
+        if let view = self.view as! SKView? {
+            // Load the SKScene from 'GameScene.sks'
+            if let scene = SKScene(fileNamed: "GameScene") {
+                // Set the scale mode to scale to fit the window
+                scene.scaleMode = .aspectFill
+                
+                // Present the scene
+                view.presentScene(scene)
+            }
+            
+            view.ignoresSiblingOrder = false
+            
+            view.showsFPS = false
+            view.showsNodeCount = false
+        }
+        
+        //scene = GKScene(fileNamed: "GameScene")!
         // Get the SKScene from the loaded GKScene
-        sceneNode = (scene.rootNode as! GameScene?)!
+        //sceneNode = (scene.rootNode as! GameScene?)!
         // Copy gameplay related content over to the scene
-        sceneNode.entities = scene.entities
-        sceneNode.graphs = scene.graphs
+        //sceneNode.entities = scene.entities
+        //sceneNode.graphs = scene.graphs
         // Set the scale mode to scale to fit the window
-        sceneNode.scaleMode = .aspectFill
+        //sceneNode.scaleMode = .aspectFill
         
         // Present the scene
-        if let view = self.view as! SKView? {
-            view.presentScene(sceneNode)
-            view.ignoresSiblingOrder = false
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        //if let view = self.view as! SKView? {
+            //view.presentScene(sceneNode)
+            //view.ignoresSiblingOrder = false
+            //view.showsFPS = true
+            //view.showsNodeCount = true
+        //}
         
     }
     

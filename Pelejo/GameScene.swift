@@ -25,8 +25,7 @@ class GameScene: SKScene {
         
         self.lastUpdateTime = 0
         
-        cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,
-                                         y: fabiano.elementBody.position.y)
+        cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,y: fabiano.elementBody.position.y)
         //adding camera to scene
         addChild(cameraNode)
         self.camera = cameraNode
@@ -34,6 +33,8 @@ class GameScene: SKScene {
     }
     
     override func didMove(to view: SKView) {
+        
+        
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
         fabiano.loadFrontWalkTextureArray(folderName: "WalkFabFront", numberOfTextures: 6)
         fabiano.loadBackWalkTextureArray(folderName: "WalkFabBack", numberOfTextures: 6)
