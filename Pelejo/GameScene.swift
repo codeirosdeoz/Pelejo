@@ -18,6 +18,7 @@ class GameScene: SKScene {
     private var lastUpdateTime : TimeInterval = 0
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
+    private var aux = true
     
     let cameraNode = SKCameraNode()
     
@@ -41,10 +42,28 @@ class GameScene: SKScene {
     }
     
     func moveFabiano(swipe:UISwipeGestureRecognizer){
+
+        
         if swipe.direction == .left{
+            
+            if(aux){
+                //fabiano.elementBody.yScale = fabiano.elementBody.yScale  * -1
+                
+                fabiano.elementBody.xScale = fabiano.elementBody.xScale  * -1
+            }
+            aux = false
+            
             fabiano.moveElementLeft()
             fabiano.animamteBackWalk()
+            
+            
         }else if swipe.direction == .right{
+            if(!aux){
+                //fabiano.elementBody.yScale = fabiano.elementBody.yScale  * -1
+                fabiano.elementBody.xScale = fabiano.elementBody.xScale  * -1
+            }
+            
+            aux = true
             fabiano.moveElementRight()
             fabiano.animamteFrontWalk()
         }

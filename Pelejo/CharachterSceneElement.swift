@@ -54,7 +54,7 @@ class CharachterSceneElement{
     }
     
     func animamteBackWalk(){
-        elementBody.run(SKAction.repeatForever(SKAction.animate(with: animationBackWalkTextures, timePerFrame: 0.1)),withKey: "Animate Left")
+        elementBody.run(SKAction.repeatForever(SKAction.animate(with: animationFrontWalkTextures, timePerFrame: 0.1)),withKey: "Animate Left")
     }
     
     func stopAnimate(key:String){
@@ -67,7 +67,7 @@ class CharachterSceneElement{
             elementBody.removeAction(forKey: "Animate Left")
             stopMoviment(movimentKey: "Left")
             leftMoviment = false
-            elementBody.run(SKAction.setTexture(animationBackWalkTextures[0]))
+            elementBody.run(SKAction.setTexture(animationFrontWalkTextures[0]))
         }
     }
 }

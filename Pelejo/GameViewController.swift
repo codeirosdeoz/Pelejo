@@ -34,6 +34,7 @@ class GameViewController: UIViewController {
             sceneNode.scaleMode = .aspectFill
             view.presentScene(sceneNode)
             view.ignoresSiblingOrder = false
+            view.showsPhysics = true
         }
         
     }
