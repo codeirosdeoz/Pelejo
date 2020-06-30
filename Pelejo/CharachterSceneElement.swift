@@ -62,10 +62,12 @@ class CharachterSceneElement{
             elementBody.removeAction(forKey: "Animate Right")
             stopMoviment(movimentKey: "Right")
             rightMoviment = false
+            elementBody.run(SKAction.setTexture(animationFrontWalkTextures[0]))
         }else{
             elementBody.removeAction(forKey: "Animate Left")
             stopMoviment(movimentKey: "Left")
             leftMoviment = false
+            elementBody.run(SKAction.setTexture(animationBackWalkTextures[0]))
         }
     }
 }

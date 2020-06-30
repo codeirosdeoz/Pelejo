@@ -12,14 +12,15 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    //var scene = GKScene()
     var sceneNode = GameScene()
-    
+    var firstTouch = UITouch()
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        rightSwipe.cancelsTouchesInView = false
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
+        leftSwipe.cancelsTouchesInView = false
         let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         rightSwipe.direction = .right
         leftSwipe.direction = .left
@@ -37,7 +38,13 @@ class GameViewController: UIViewController {
         
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("end")
+        sceneNode.stopFabiano()
+    }
+    
     @objc func swipeHandler(sender:UISwipeGestureRecognizer){
+        print("swipe")
         sceneNode.moveFabiano(swipe: sender)
     }
     
