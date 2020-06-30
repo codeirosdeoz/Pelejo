@@ -9,7 +9,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
@@ -22,9 +22,13 @@ class GameScene: SKScene {
     
     let cameraNode = SKCameraNode()
     
+    var gameViewController: GameViewController!
+    
     override func sceneDidLoad() {
         
         self.lastUpdateTime = 0
+        
+        physicsWorld.contactDelegate = self
         
         cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,y: fabiano.elementBody.position.y)
         //adding camera to scene
@@ -107,6 +111,34 @@ class GameScene: SKScene {
         return result
     }
 
+    
+    //Implementação de funÇão do protocolo SKPhysicsContactDelegate que é chamada quando há colisão entre elementos de uma msm mask
+    func didBegin(_ contact: SKPhysicsContact) {
+        print("Collison detected")
+    
+        
+        if let node = contact.bodyA.node?.name as! String? {
+            if(node  == "Branch"){
+                gameViewController.collectedBranches+=1
+                gameViewController.textNumberBranches.text = "Colected branches: " + String(gameViewController.collectedBranches)
+
+                contact.bodyA.node?.removeFromParent()
+            }
+
+        }
+            
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "Branch"){
+                gameViewController.collectedBranches+=1
+                gameViewController.textNumberBranches.text = "Colected branches: " + String(gameViewController.collectedBranches)
+
+                contact.bodyB.node?.removeFromParent()
+
+            }
+         }
+    }
+    
 }
 
 

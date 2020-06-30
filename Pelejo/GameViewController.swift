@@ -14,6 +14,10 @@ class GameViewController: UIViewController {
     
     var sceneNode = GameScene()
     var firstTouch = UITouch()
+
+    var collectedBranches = 0
+    var textNumberBranches = UITextView(frame: CGRect(x: 10, y: 0, width: 100, height: 100))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +32,11 @@ class GameViewController: UIViewController {
         view.addGestureRecognizer(leftSwipe)
         view.addGestureRecognizer(tap)
         
+        textNumberBranches.text = "Colected branches: " + String(collectedBranches)
+        textNumberBranches.backgroundColor = nil
+        view.addSubview(textNumberBranches)
+
+        
         if let view = self.view as! SKView? {
             let scene = SKScene(fileNamed: "GameScene")!
             sceneNode = scene as! GameScene
@@ -35,6 +44,8 @@ class GameViewController: UIViewController {
             view.presentScene(sceneNode)
             view.ignoresSiblingOrder = false
             //view.showsPhysics = true
+            
+            sceneNode.gameViewController = self
         }
         
     }
