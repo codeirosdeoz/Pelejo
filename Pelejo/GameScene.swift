@@ -53,8 +53,9 @@ class GameScene: SKScene {
             }
             aux = false
             
-            fabiano.moveElementLeft()
             fabiano.animamteBackWalk()
+            //EU ACHO QUE A ANIMACAO EM QUE COMECAR UM POUCO ANTES DO MOVIMENTO EM SI, MEXA NESSE 0.1 PRA AJUSTAR ISSO (A GENTE PRIMEIRO LEVANTA A PERTA DE DPS SE DESLOCA)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1, execute: {self.fabiano.moveElementLeft()})
             
             
         }else if swipe.direction == .right{
@@ -64,8 +65,9 @@ class GameScene: SKScene {
             }
             
             aux = true
-            fabiano.moveElementRight()
+        
             fabiano.animamteFrontWalk()
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1, execute: {self.fabiano.moveElementRight()})
         }
         
     }

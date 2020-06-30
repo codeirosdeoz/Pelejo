@@ -49,11 +49,13 @@ class CharachterSceneElement{
     }
     
     func animamteFrontWalk(){
+        //BULA EM timerPerFrame PROS FRAMES PASSAREM MAIS RÁPIDOS, EU SÓ DIGO O ÓBVIO MESMO, SOU LINDO
         elementBody.run(SKAction.repeatForever(SKAction.animate(with: animationFrontWalkTextures, timePerFrame: 0.1)),withKey: "Animate Right")
         
     }
     
     func animamteBackWalk(){
+        //AQUI TAMBÉM, O MESMO DO DE CIMA
         elementBody.run(SKAction.repeatForever(SKAction.animate(with: animationFrontWalkTextures, timePerFrame: 0.1)),withKey: "Animate Left")
     }
     
