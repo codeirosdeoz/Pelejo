@@ -154,6 +154,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
             }
          }
+        
+        if let node = contact.bodyA.node?.name as! String? {
+            if(node  == "endZone"){
+                print("terminou")
+            }
+
+        }
+            
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "endZone"){
+                print("terminou")
+            }
+         }
+        
+        if let node = contact.bodyA.node?.name as! String? {
+            if(node  == "hitHole"){
+                gameViewController.collectedBranches = 0
+                gameViewController.textNumberBranches.text = "Colected branches: " + String(gameViewController.collectedBranches)
+                gameViewController.restart()
+            }
+        }
+            
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "hitHole"){
+                gameViewController.collectedBranches = 0
+                gameViewController.textNumberBranches.text = "Colected branches: " + String(gameViewController.collectedBranches)
+                gameViewController.restart()
+            }
+         }
     }
     
 }

@@ -50,6 +50,20 @@ class GameViewController: UIViewController {
         
     }
     
+    func restart(){
+        
+        if let view = self.view as! SKView? {
+            let scene = SKScene(fileNamed: "GameScene")!
+            sceneNode = scene as! GameScene
+            sceneNode.scaleMode = .aspectFill
+            view.presentScene(sceneNode)
+            view.ignoresSiblingOrder = false
+            //view.showsPhysics = true
+            
+            sceneNode.gameViewController = self
+        }
+    }
+    
     @IBAction func knifebutton() {
         print("knife")
     }
