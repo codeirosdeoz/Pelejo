@@ -25,12 +25,12 @@ class GameViewController: UIViewController {
         rightSwipe.cancelsTouchesInView = false
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         leftSwipe.cancelsTouchesInView = false
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        //let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         rightSwipe.direction = .right
         leftSwipe.direction = .left
         view.addGestureRecognizer(rightSwipe)
         view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(tap)
+        //view.addGestureRecognizer(tap)
         
         textNumberBranches.text = "Colected branches: " + String(collectedBranches)
         textNumberBranches.backgroundColor = nil
@@ -66,6 +66,19 @@ class GameViewController: UIViewController {
     
     @IBAction func knifebutton() {
         print("knife")
+        let spriteNode = sceneNode.fabiano.elementBody as! SKSpriteNode
+        
+        if (sceneNode.fabiano.isHoldingKnife){
+            spriteNode.texture = SKTexture(imageNamed: "WalkFabFront/0")
+            sceneNode.fabiano.elementBody.xScale = sceneNode.fabiano.elementBody.xScale / 1.4
+            sceneNode.fabiano.isHoldingKnife = false
+        }else{
+            spriteNode.texture = SKTexture(imageNamed: "WalkFabKnife/0")
+            sceneNode.fabiano.elementBody.xScale = sceneNode.fabiano.elementBody.xScale * 1.4
+            sceneNode.fabiano.isHoldingKnife = true
+
+        }
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -78,8 +91,37 @@ class GameViewController: UIViewController {
         sceneNode.moveFabiano(swipe: sender)
     }
     
-    @objc func tapHandler(sender:UITapGestureRecognizer){
-        sceneNode.jumpFabiano()
+
+//    @objc func tapHandler(sender:UITapGestureRecognizer){
+//        sceneNode.jumpFabiano()
+//
+//
+//     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touchLocation = touches.first!.location(in: sceneNode)
+        var aux = false
+        
+        let touchedNode = sceneNode.nodes(at: touchLocation)
+//        print("------ TOUCHED NODES:")
+//        print(touchedNode)
+        
+        for i in touchedNode{
+            if (i.name == "DestroyableCactus") {
+                aux = true
+            }
+        }
+
+        if (aux) {
+            sceneNode.fabiano.animateKnifeAttack()
+
+       }else{
+           sceneNode.jumpFabiano()
+
+       }
+
+
+
     }
     
     override var shouldAutorotate: Bool {
