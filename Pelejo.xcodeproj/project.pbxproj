@@ -22,6 +22,7 @@
 		8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7D524A44125002F963A /* InitialPageViewController.swift */; };
 		8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */; };
 		8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DD24A44506002F963A /* ChaptersViewController.swift */; };
+		865B14E724AC271B00F5DE80 /* BirdClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B14E624AC271B00F5DE80 /* BirdClass.swift */; };
 		A7A346C824A5D53A00C9270B /* Underdog-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */; };
 		A7A346C924A5D53A00C9270B /* Xilo-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		8602C7D524A44125002F963A /* InitialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialPageViewController.swift; sourceTree = "<group>"; };
 		8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryViewController.swift; sourceTree = "<group>"; };
 		8602C7DD24A44506002F963A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		865B14E624AC271B00F5DE80 /* BirdClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdClass.swift; sourceTree = "<group>"; };
 		A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Underdog-Regular.ttf"; path = "Pelejo/Fonts/Underdog-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Xilo-Sans.ttf"; path = "Pelejo/Fonts/Xilo-Sans.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */,
 				8602C7DD24A44506002F963A /* ChaptersViewController.swift */,
 				28FA554624A5AB020077747D /* MovimentClass.swift */,
+				865B14E624AC271B00F5DE80 /* BirdClass.swift */,
 				28FA554824A5AB470077747D /* CharachterSceneElement.swift */,
 			);
 			path = Pelejo;
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865B14E724AC271B00F5DE80 /* BirdClass.swift in Sources */,
 				8602C7A824A42946002F963A /* GameScene.swift in Sources */,
 				28FA554724A5AB020077747D /* MovimentClass.swift in Sources */,
 				8602C7AA24A42946002F963A /* GameViewController.swift in Sources */,

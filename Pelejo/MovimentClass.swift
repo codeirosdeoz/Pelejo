@@ -20,6 +20,7 @@ class MovimentClass{
     
     func moveRight(body:SKNode){
         body.run(SKAction.repeatForever(SKAction.move(by: CGVector(dx: xMovimentVariation, dy: 0), duration: interval)), withKey: "Right")
+        
     }
     
     func stopMovimentForKey(body:SKNode, movimentKey:String){
