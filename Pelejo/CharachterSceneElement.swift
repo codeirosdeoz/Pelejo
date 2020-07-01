@@ -12,8 +12,12 @@ class CharachterSceneElement{
     public var elementBody:SKNode = SKNode()
     var animationFrontWalkTextures:[SKTexture] = []
     var animationBackWalkTextures:[SKTexture] = []
+    var animationWalkKnifeTextures: [SKTexture] = []
+    var animationKnifeAttackTextures: [SKTexture] = []
     var leftMoviment = false
     var rightMoviment = false
+    var isJumping = false
+    var isHoldingKnife = false
     private let movimentHandler = MovimentClass()
     
     func moveElementRight(){
@@ -46,6 +50,18 @@ class CharachterSceneElement{
         for i in 0..<numberOfTextures{
             animationBackWalkTextures.append(SKTexture(imageNamed:"WalkFabBack/\(i)" ))
         }
+    }
+    
+    func loadKnifeWalkTextureArray(numberOfTextures: Int){
+        for i in 0..<numberOfTextures{
+             animationWalkKnifeTextures.append(SKTexture(imageNamed:"WalkFabiKnife/\(i)" ))
+         }
+    }
+    
+    func loadKnifeAttackTextureArray(numberOfTextures: Int){
+        for i in 0..<numberOfTextures{
+             animationKnifeAttackTextures.append(SKTexture(imageNamed:"FabKnifeAttack/\(i)" ))
+         }
     }
     
     func animamteFrontWalk(){

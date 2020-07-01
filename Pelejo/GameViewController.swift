@@ -66,6 +66,7 @@ class GameViewController: UIViewController {
     
     @IBAction func knifebutton() {
         print("knife")
+        sceneNode.fabiano.isHoldingKnife = !sceneNode.fabiano.isHoldingKnife
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

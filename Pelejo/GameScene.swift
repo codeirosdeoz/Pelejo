@@ -36,7 +36,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             birds.append(BirdClass(node: i))
         }
 
-        print(birdsNodes)
+        
         physicsWorld.contactDelegate = self
         
         cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,y: fabiano.elementBody.position.y)
