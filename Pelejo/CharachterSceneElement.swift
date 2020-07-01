@@ -79,7 +79,10 @@ class CharachterSceneElement{
     
     func animateKnifeAttack(){
         if(isHoldingKnife){
-            elementBody.run(SKAction.animate(with: animationKnifeAttackTextures, timePerFrame: 0.2))
+            elementBody.run(SKAction.animate(with: animationKnifeAttackTextures, timePerFrame: 0.03))
+            elementBody.run(SKAction.animate(with: animationKnifeAttackTextures, timePerFrame: 0.03))
+            elementBody.run(SKAction.animate(with: animationKnifeAttackTextures, timePerFrame: 0.03))
+
         }
     }
     
