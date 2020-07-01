@@ -14,20 +14,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var entities = [GKEntity]()
     var graphs = [String : GKGraph]()
     var fabiano = CharachterSceneElement()
-    
+    var gameViewController: GameViewController!
+    let cameraNode = SKCameraNode()
     private var lastUpdateTime : TimeInterval = 0
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     private var aux = true
+    var birdsNodes: [SKNode] = []
+    var birds: [BirdClass] = []
+   
     
-    let cameraNode = SKCameraNode()
     
-    var gameViewController: GameViewController!
     
     override func sceneDidLoad() {
         
         self.lastUpdateTime = 0
         
+        birdsNodes = self["Bird"]
+        
+        for i in birdsNodes{
+            birds.append(BirdClass(node: i))
+        }
+
+        print(birdsNodes)
         physicsWorld.contactDelegate = self
         
         cameraNode.position = CGPoint(x: fabiano.elementBody.position.x,y: fabiano.elementBody.position.y)
@@ -38,6 +47,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func didMove(to view: SKView) {
+        
+        for i in birds {
+            i.flyLeft()
+            i.animateFly()
+        }
         
         
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
@@ -94,6 +108,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         cameraNode.position = CGPoint(x: xPos , y: 0.0)
        
+        for i in birds{
+            i.movementManagement()
+        }
     }
     
     
