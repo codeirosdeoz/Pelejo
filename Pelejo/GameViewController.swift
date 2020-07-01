@@ -66,7 +66,19 @@ class GameViewController: UIViewController {
     
     @IBAction func knifebutton() {
         print("knife")
-        sceneNode.fabiano.isHoldingKnife = !sceneNode.fabiano.isHoldingKnife
+        let spriteNode = sceneNode.fabiano.elementBody as! SKSpriteNode
+        
+        if (sceneNode.fabiano.isHoldingKnife){
+            spriteNode.texture = SKTexture(imageNamed: "WalkFabFront/0")
+            sceneNode.fabiano.elementBody.xScale = sceneNode.fabiano.elementBody.xScale / 1.4
+            sceneNode.fabiano.isHoldingKnife = false
+        }else{
+            spriteNode.texture = SKTexture(imageNamed: "WalkFabKnife/0")
+            sceneNode.fabiano.elementBody.xScale = sceneNode.fabiano.elementBody.xScale * 1.4
+            sceneNode.fabiano.isHoldingKnife = true
+
+        }
+        
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -80,6 +92,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func tapHandler(sender:UITapGestureRecognizer){
+        
         sceneNode.jumpFabiano()
     }
     

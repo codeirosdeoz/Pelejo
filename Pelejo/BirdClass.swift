@@ -24,8 +24,6 @@ public class BirdClass{
     init(node:SKNode) {
         birdNode = node
         loadTextures()
-        
-        
     }
     
     func movementManagement(){
@@ -45,8 +43,8 @@ public class BirdClass{
     
     func loadTextures(){
         for i in 0..<numberOfTextures{
-            print(i)
-            print(SKTexture(imageNamed:"BirdFlying/\(i)"))
+//            print(i)
+//            print(SKTexture(imageNamed:"BirdFlying/\(i)"))
             flyAnimationTextures.append(SKTexture(imageNamed:"BirdFlying/\(i)" ))
         }
         

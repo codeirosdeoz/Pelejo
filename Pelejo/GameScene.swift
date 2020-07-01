@@ -22,6 +22,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var aux = true
     var birdsNodes: [SKNode] = []
     var birds: [BirdClass] = []
+    var destroyableCactus: [SKNode] = []
    
     
     
@@ -31,6 +32,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.lastUpdateTime = 0
         
         birdsNodes = self["Bird"]
+        destroyableCactus = self["DestroyableCactus"]
         
         for i in birdsNodes{
             birds.append(BirdClass(node: i))
@@ -53,10 +55,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             i.animateFly()
         }
         
+        for i in destroyableCactus {
+            i.isUserInteractionEnabled = true
+            
+        }
         
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
         fabiano.loadFrontWalkTextureArray(folderName: "WalkFabFront", numberOfTextures: 6)
         fabiano.loadBackWalkTextureArray(folderName: "WalkFabBack", numberOfTextures: 6)
+        fabiano.loadKnifeWalkTextureArray(numberOfTextures: 5)
+        fabiano.loadKnifeAttackTextureArray(numberOfTextures: 4)
     }
     
     func moveFabiano(swipe:UISwipeGestureRecognizer){
