@@ -50,6 +50,10 @@ class GameViewController: UIViewController {
         
     }
     
+    @IBAction func knifebutton() {
+        print("knife")
+    }
+    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("end")
         sceneNode.stopFabiano()

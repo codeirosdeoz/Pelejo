@@ -268,6 +268,16 @@ Que abrigo oferecia</string>
                     <view key="view" contentMode="scaleToFill" id="acH-6I-8Jc" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4r-IV-QA3">
+                                <rect key="frame" x="750" y="282" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_knife"/>
+                                <connections>
+                                    <action selector="knifebutton" destination="zWG-8f-kO6" eventType="touchUpInside" id="vNH-t2-jCW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dr3-6g-bFJ"/>
                     </view>
@@ -275,12 +285,13 @@ Que abrigo oferecia</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4o-iC-mLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2363" y="138"/>
+            <point key="canvasLocation" x="2362.5" y="137.68115942028987"/>
         </scene>
     </scenes>
     <resources>
         <image name="background" width="957" height="622"/>
         <image name="button" width="292" height="80"/>
+        <image name="button_knife" width="362" height="362"/>
         <image name="cloth" width="105" height="45"/>
         <image name="cloth_dark" width="178" height="76"/>
         <image name="cordel_overlay" width="446" height="510"/>
