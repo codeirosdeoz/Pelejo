@@ -27,9 +27,16 @@ class ChapterStoryViewController: UIViewController {
             self.view.centerXAnchor).isActive = true
         background.centerYAnchor.constraint(equalTo:
             self.view.centerYAnchor).isActive = true
-        
-        cordelText.translatesAutoresizingMaskIntoConstraints = false
-        cordelText.centerXAnchor.constraint(equalTo: cordelOverlay.centerXAnchor, constant: cordelOverlay.bounds.width / 30).isActive = true
-        cordelText.topAnchor.constraint(equalTo: cordelOverlay.topAnchor, constant: view.bounds.height / 10).isActive = true
+    
+        if (cordelText != nil) {
+            cordelText.translatesAutoresizingMaskIntoConstraints = false
+            cordelText.centerXAnchor.constraint(equalTo: cordelOverlay.centerXAnchor, constant: cordelOverlay.bounds.width / 30).isActive = true
+            cordelText.topAnchor.constraint(equalTo: cordelOverlay.topAnchor, constant: view.bounds.height / 10).isActive = true
+        }
+    }
+    
+    @IBAction func goBack() {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
     }
 }

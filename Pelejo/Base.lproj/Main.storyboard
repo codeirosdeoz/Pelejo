@@ -52,6 +52,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zIa-Uf-BCN"/>
                     <connections>
                         <outlet property="background" destination="dE2-uX-8aq" id="aEo-yq-sAW"/>
                         <outlet property="gameLogo" destination="9Qn-gr-4qC" id="PpC-43-Bpd"/>
@@ -87,7 +88,7 @@
                                         <rect key="frame" x="132" y="236" width="125" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloth_dark" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-Pr-Zjm">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloth" translatesAutoresizingMaskIntoConstraints="NO" id="rtF-Pr-Zjm">
                                         <rect key="frame" x="348" y="252" width="125" height="87"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -124,33 +125,52 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="number_1" translatesAutoresizingMaskIntoConstraints="NO" id="BLc-6z-UNo">
-                                        <rect key="frame" x="176" y="193" width="32" height="75"/>
+                                        <rect key="frame" x="391" y="224" width="32" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="number_0" translatesAutoresizingMaskIntoConstraints="NO" id="ptP-p2-JaU">
+                                        <rect key="frame" x="171" y="198" width="50" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloth_dark" translatesAutoresizingMaskIntoConstraints="NO" id="Snz-BT-NQH">
                                         <rect key="frame" x="278" y="118" width="52" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloth_dark" translatesAutoresizingMaskIntoConstraints="NO" id="ISd-kB-kCH">
+                                        <rect key="frame" x="681" y="44" width="26" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImH-ZM-Bf8">
-                                        <rect key="frame" x="136" y="172" width="121" height="122"/>
+                                        <rect key="frame" x="350" y="206" width="121" height="121"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <connections>
                                             <segue destination="Jjm-n1-yfg" kind="show" id="IqN-4N-Xe3"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloth_dark" translatesAutoresizingMaskIntoConstraints="NO" id="ISd-kB-kCH">
-                                        <rect key="frame" x="681" y="44" width="26" height="17"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBS-fk-6Rw">
+                                        <rect key="frame" x="136" y="188" width="112" height="111"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <connections>
+                                            <segue destination="iok-zC-OEK" kind="show" id="W47-2d-yDK"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAPÍTULOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBb-lr-bwg">
-                                <rect key="frame" x="51" y="37" width="101" height="24"/>
+                                <rect key="frame" x="97" y="36" width="101" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="24"/>
                                 <color key="textColor" red="0.14901960784313725" green="0.094117647058823528" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10c-Eq-tZi">
+                                <rect key="frame" x="50" y="30" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_back"/>
+                                <connections>
+                                    <action selector="goBack" destination="Mx4-3K-ktA" eventType="touchUpInside" id="OqK-ix-r2F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="bkt-aT-kC1"/>
@@ -179,14 +199,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAPÍTULO 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqN-UO-yhi">
-                                <rect key="frame" x="67" y="41" width="85" height="20"/>
+                                <rect key="frame" x="90" y="31" width="85" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="20"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A mudança" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVU-DA-RW0">
-                                <rect key="frame" x="67" y="61" width="219" height="50"/>
+                                <rect key="frame" x="90" y="51" width="219" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Underdog-Regular" family="Underdog" pointSize="43"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -232,6 +252,14 @@ Que abrigo oferecia</string>
                                     <segue destination="zWG-8f-kO6" kind="show" id="pPC-fo-hD9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhL-VC-CE8">
+                                <rect key="frame" x="50" y="30" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_back"/>
+                                <connections>
+                                    <action selector="goBack" destination="Jjm-n1-yfg" eventType="touchUpInside" id="Gqd-CN-guU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gj7-bY-oas"/>
@@ -259,27 +287,55 @@ Que abrigo oferecia</string>
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hud_hunger" translatesAutoresizingMaskIntoConstraints="NO" id="oEj-ih-gcs">
+                                <rect key="frame" x="687" y="28" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hud_thirst" id="p8Z-4e-sLc">
+                                <rect key="frame" x="753" y="28" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hud_sadness" id="qMr-Z9-NaP">
+                                <rect key="frame" x="817" y="28" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ste-AZ-2Aq">
                                 <rect key="frame" x="47" y="87" width="59" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button_mission"/>
+                                <connections>
+                                    <action selector="toggleMission" destination="zWG-8f-kO6" eventType="touchUpInside" id="80C-Tj-Up2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyf-oi-BVa">
                                 <rect key="frame" x="47" y="20" width="59" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button_pause"/>
+                                <connections>
+                                    <action selector="togglePause" destination="zWG-8f-kO6" eventType="touchUpInside" id="uDb-6q-S9H"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4r-IV-QA3">
                                 <rect key="frame" x="786" y="282" width="82" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" backgroundImage="button_knife"/>
                                 <connections>
                                     <action selector="knifebutton" destination="zWG-8f-kO6" eventType="touchUpInside" id="vNH-t2-jCW"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-Yg-YzV">
+                                <rect key="frame" x="692" y="321" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" backgroundImage="button_forward">
+                                    <color key="titleColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton" destination="zWG-8f-kO6" eventType="touchUpInside" id="M03-U2-Hd9"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAr-lT-UpC">
                                 <rect key="frame" x="337" y="-20" width="579" height="454"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="overlay_card" translatesAutoresizingMaskIntoConstraints="NO" id="Ca4-OI-eLg">
                                         <rect key="frame" x="20" y="20" width="539" height="414"/>
@@ -309,18 +365,44 @@ Que abrigo oferecia</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-Yg-YzV">
-                                <rect key="frame" x="692" y="321" width="83" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cloth_dark">
-                                    <color key="titleColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionButton" destination="zWG-8f-kO6" eventType="touchUpInside" id="M03-U2-Hd9"/>
-                                </connections>
-                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uC-wo-h2i">
+                                <rect key="frame" x="155" y="7" width="586" height="401"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="overlay_popup" translatesAutoresizingMaskIntoConstraints="NO" id="F6M-Hm-LDP">
+                                        <rect key="frame" x="20" y="20" width="546" height="361"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUM-8e-Rc0">
+                                        <rect key="frame" x="175" y="165" width="237" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="24"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Continuar" backgroundImage="button"/>
+                                        <connections>
+                                            <action selector="togglePause" destination="zWG-8f-kO6" eventType="touchUpInside" id="9Ak-yy-DmT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2G-1e-QMA">
+                                        <rect key="frame" x="175" y="249" width="237" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="24"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Sair do jogo" backgroundImage="button"/>
+                                        <connections>
+                                            <action selector="endGame" destination="zWG-8f-kO6" eventType="touchUpInside" id="STQ-8R-gx9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="em pausa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CR-fj-oKl">
+                                        <rect key="frame" x="233" y="93" width="120" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="32"/>
+                                        <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dr3-6g-bFJ"/>
@@ -328,19 +410,97 @@ Que abrigo oferecia</string>
                     <navigationItem key="navigationItem" id="GAL-Hh-J6H"/>
                     <connections>
                         <outlet property="actionKnifeButton" destination="G4r-IV-QA3" id="OGd-nz-rI6"/>
-                        <outlet property="missionButton" destination="ste-AZ-2Aq" id="AAu-xk-ceh"/>
-                        <outlet property="pauseButton" destination="Lyf-oi-BVa" id="S3y-Cp-aiY"/>
                         <outlet property="knifeCutButton" destination="lTc-Yg-YzV" id="Wc4-1f-2p0"/>
+                        <outlet property="missionButton" destination="ste-AZ-2Aq" id="AAu-xk-ceh"/>
+                        <outlet property="missionView" destination="cAr-lT-UpC" id="viJ-ZM-38S"/>
+                        <outlet property="pauseButton" destination="Lyf-oi-BVa" id="S3y-Cp-aiY"/>
+                        <outlet property="pauseView" destination="9uC-wo-h2i" id="Yth-dH-H6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4o-iC-mLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2362.5" y="137.68115942028987"/>
         </scene>
+        <!--Chapter Story View Controller-->
+        <scene sceneID="kkF-QM-p0Z">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="iok-zC-OEK" customClass="ChapterStoryViewController" customModule="Pelejo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7dw-qN-cw9">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hEw-n5-s1h">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ3-qi-gmI">
+                                <rect key="frame" x="50" y="30" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_back"/>
+                                <connections>
+                                    <action selector="goBack" destination="iok-zC-OEK" eventType="touchUpInside" id="U3T-H7-QnH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CAPÍTULO 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpT-gK-Zeo">
+                                <rect key="frame" x="90" y="31" width="90" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="20"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutorial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2L-ne-bab">
+                                <rect key="frame" x="90" y="51" width="152" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Underdog-Regular" family="Underdog" pointSize="43"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.094117647060000004" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJt-JM-ztW">
+                                <rect key="frame" x="660" y="341" width="190" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Xilosa" family="Xilosa" pointSize="24"/>
+                                <inset key="titleEdgeInsets" minX="-33" minY="-3" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="149" minY="17" maxX="28" maxY="21"/>
+                                <state key="normal" title="Continuar" image="icon_forward" backgroundImage="button"/>
+                                <connections>
+                                    <segue destination="zWG-8f-kO6" kind="show" id="ldF-Ru-6gH"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ativo 16" translatesAutoresizingMaskIntoConstraints="NO" id="SB8-ce-30B">
+                                <rect key="frame" x="67" y="164" width="215" height="250"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ativo 19" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-2z-TP6">
+                                <rect key="frame" x="258" y="294" width="80" height="126"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="cOr-S0-Ysb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sMH-EO-EHO"/>
+                    <connections>
+                        <outlet property="background" destination="hEw-n5-s1h" id="7Fz-S6-EpJ"/>
+                        <outlet property="chapterNumber" destination="mpT-gK-Zeo" id="c0U-vG-uQO"/>
+                        <outlet property="chapterTitle" destination="w2L-ne-bab" id="6Ee-eU-5Or"/>
+                        <outlet property="gameButton" destination="oJt-JM-ztW" id="PnC-ig-ANS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pv-Ys-jld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622.5446428571429" y="-757.97101449275374"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pPC-fo-hD9"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="Ativo 16" width="275" height="329"/>
+        <image name="Ativo 19" width="241" height="349"/>
         <image name="background" width="957" height="622"/>
         <image name="button" width="292" height="80"/>
+        <image name="button_back" width="362" height="362"/>
+        <image name="button_forward" width="362" height="362"/>
         <image name="button_knife" width="362" height="362"/>
         <image name="button_mission" width="362" height="362"/>
         <image name="button_pause" width="362" height="362"/>
@@ -348,9 +508,14 @@ Que abrigo oferecia</string>
         <image name="cloth_dark" width="178" height="76"/>
         <image name="cordel_overlay" width="446" height="510"/>
         <image name="farm" width="7161" height="2942"/>
+        <image name="hud_hunger" width="342" height="342"/>
+        <image name="hud_sadness" width="342" height="342"/>
+        <image name="hud_thirst" width="342" height="342"/>
         <image name="icon_forward" width="108" height="167"/>
+        <image name="number_0" width="34" height="47"/>
         <image name="number_1" width="18" height="48"/>
         <image name="overlay_card" width="625" height="507"/>
+        <image name="overlay_popup" width="556" height="393"/>
         <image name="path" width="883" height="285"/>
         <image name="sun" width="1092" height="1092"/>
     </resources>

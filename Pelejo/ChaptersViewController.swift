@@ -24,4 +24,9 @@ class ChaptersViewController: UIViewController{
         background.centerYAnchor.constraint(equalTo:
             self.view.centerYAnchor).isActive = true
     }
+    
+    @IBAction func goBack() {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  TutorialViewController.swift
 //  Pelejo
 //
 //  Created by Elaine  Cruz on 24/06/20.
@@ -10,23 +10,16 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class TutorialViewController: UIViewController {
     
-    var sceneNode = GameScene()
+    var sceneNode = TutorialScene()
     var firstTouch = UITouch()
 
-    var collectedBranches = 0
-    var textNumberBranches = UITextView(frame: CGRect(x: 10, y: 0, width: 100, height: 100))
-    var cactosDestroyed = 5
     var cut = false
-    var missionShowing = false
-    var paused = false
     
     @IBOutlet weak var knifeCutButton: UIButton!
-    @IBOutlet weak var pauseView: UIView!
+    
     @IBOutlet weak var missionView: UIView!
-    @IBOutlet weak var pauseButton: UIButton!
-    @IBOutlet weak var missionButton: UIButton!
     @IBOutlet weak var actionKnifeButton: UIButton!
     
     override func viewDidLoad() {
@@ -36,12 +29,10 @@ class GameViewController: UIViewController {
         rightSwipe.cancelsTouchesInView = false
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         leftSwipe.cancelsTouchesInView = false
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         rightSwipe.direction = .right
         leftSwipe.direction = .left
         view.addGestureRecognizer(rightSwipe)
         view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(tap)
         
 //        textNumberBranches.text = "Colected branches: " + String(collectedBranches)
 //        textNumberBranches.backgroundColor = nil
@@ -49,14 +40,13 @@ class GameViewController: UIViewController {
 
         
         if let view = self.view as! SKView? {
-            let scene = SKScene(fileNamed: "GameScene")!
-            sceneNode = scene as! GameScene
+            let scene = SKScene(fileNamed: "TutorialScene")!
+            sceneNode = scene as! TutorialScene
             sceneNode.scaleMode = .aspectFill
             view.presentScene(sceneNode)
             view.ignoresSiblingOrder = false
             //view.showsPhysics = true
             
-            sceneNode.gameViewController = self
         }
         
     }
@@ -64,65 +54,16 @@ class GameViewController: UIViewController {
     func restart(){
         
         if let view = self.view as! SKView? {
-            let scene = SKScene(fileNamed: "GameScene")!
-            sceneNode = scene as! GameScene
+            let scene = SKScene(fileNamed: "TutorialScene")!
+            sceneNode = scene as! TutorialScene
             sceneNode.scaleMode = .aspectFill
             view.presentScene(sceneNode)
             view.ignoresSiblingOrder = false
             //view.showsPhysics = true
             
-            sceneNode.gameViewController = self
         }
     }
-    @IBAction func endGame() {
-        self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func togglePause() {
-        if (!missionShowing) {
-            if (paused) {
-                pauseView.isHidden = true
-                sceneNode.isPaused = false
-                paused = false
-            } else {
-                pauseView.isHidden = false
-                sceneNode.isPaused = true
-                paused = true
-            }
-        }
-    }
-    
-    @IBAction func toggleMission() {
-        if (!paused) {
-            if (missionShowing) {
-                sceneNode.isPaused = false
-                missionShowing = false
-                
-                self.missionView.transform = .identity
-                
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
-                    self.missionView.transform = CGAffineTransform(translationX: self.view.bounds.width, y: 0)
-                }) { _ in
-                    self.missionView.isHidden = true
-                }
-                
-            } else {
-                missionShowing = true
-                missionView.isHidden = false
 
-                self.missionView.transform = CGAffineTransform(translationX: view.bounds.width, y: 0)
-
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
-                    self.missionView.transform = .identity
-                }) { _ in
-                    self.sceneNode.isPaused = true
-                }
-                
-            }
-        }
-    }
-    
     @IBAction func knifebutton() {
         //print("knife")
         let spriteNode = sceneNode.fabiano.elementBody as! SKSpriteNode
@@ -142,37 +83,9 @@ class GameViewController: UIViewController {
         
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //print("end")
-        sceneNode.stopFabiano()
-    }
-    
     @objc func swipeHandler(sender:UISwipeGestureRecognizer){
         //print("swipe")
         sceneNode.moveFabiano(swipe: sender)
-    }
-    
-
-    @objc func tapHandler(sender:UITapGestureRecognizer){
-        print("one tap")
-        if sceneNode.allowJump == true{
-            sceneNode.jumpFabiano()
-            sceneNode.allowJump = false
-            print("Saiu do chao")
-        }
-        
-    }
-    
-    @IBAction func actionButton() {
-        sceneNode.fabiano.animateKnifeAttack()
-        print(self.cactosDestroyed)
-        if(self.cut == true && self.cactosDestroyed > 0){
-            sceneNode.destroyableCactus[self.cactosDestroyed-1].isHidden = true
-            self.cactosDestroyed-=1
-        }
-        else{
-            self.cut = false
-        }
     }
     
     /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

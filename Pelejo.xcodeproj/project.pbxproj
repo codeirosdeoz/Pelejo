@@ -23,9 +23,10 @@
 		8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */; };
 		8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DD24A44506002F963A /* ChaptersViewController.swift */; };
 		865B14E724AC271B00F5DE80 /* BirdClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B14E624AC271B00F5DE80 /* BirdClass.swift */; };
-		A77A84B624AD4BAA007435A9 /* GameProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A84B524AD4BAA007435A9 /* GameProgress.swift */; };
 		86F8A9A424AD23F400D89E4A /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8A9A324AD23F400D89E4A /* TutorialScene.swift */; };
 		86F8A9A624AD248D00D89E4A /* TutorialScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86F8A9A524AD248D00D89E4A /* TutorialScene.sks */; };
+		A77A84B624AD4BAA007435A9 /* GameProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A84B524AD4BAA007435A9 /* GameProgress.swift */; };
+		A78D10A724ADB7570012B574 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78D10A624ADB7570012B574 /* TutorialViewController.swift */; };
 		A7A346C824A5D53A00C9270B /* Underdog-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */; };
 		A7A346C924A5D53A00C9270B /* Xilo-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */; };
 /* End PBXBuildFile section */
@@ -70,9 +71,10 @@
 		8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryViewController.swift; sourceTree = "<group>"; };
 		8602C7DD24A44506002F963A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		865B14E624AC271B00F5DE80 /* BirdClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdClass.swift; sourceTree = "<group>"; };
-		A77A84B524AD4BAA007435A9 /* GameProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgress.swift; sourceTree = "<group>"; };
 		86F8A9A324AD23F400D89E4A /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
 		86F8A9A524AD248D00D89E4A /* TutorialScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TutorialScene.sks; sourceTree = "<group>"; };
+		A77A84B524AD4BAA007435A9 /* GameProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProgress.swift; sourceTree = "<group>"; };
+		A78D10A624ADB7570012B574 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Underdog-Regular.ttf"; path = "Pelejo/Fonts/Underdog-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Xilo-Sans.ttf"; path = "Pelejo/Fonts/Xilo-Sans.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 				8602C7A524A42946002F963A /* Actions.sks */,
 				8602C7A724A42946002F963A /* GameScene.swift */,
 				8602C7A924A42946002F963A /* GameViewController.swift */,
+				A78D10A624ADB7570012B574 /* TutorialViewController.swift */,
 				8602C7AB24A42946002F963A /* Main.storyboard */,
 				8602C7AE24A42947002F963A /* Assets.xcassets */,
 				8602C7B024A42947002F963A /* LaunchScreen.storyboard */,
@@ -321,6 +324,7 @@
 				8602C7A224A42946002F963A /* AppDelegate.swift in Sources */,
 				A77A84B624AD4BAA007435A9 /* GameProgress.swift in Sources */,
 				8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */,
+				A78D10A724ADB7570012B574 /* TutorialViewController.swift in Sources */,
 				86F8A9A424AD23F400D89E4A /* TutorialScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

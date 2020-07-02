@@ -29,6 +29,7 @@ class TutorialScene: SKScene {
                 
             }
         }
+    }
         
         
     func moveFabiano(swipe:UISwipeGestureRecognizer){
@@ -64,5 +65,4 @@ class TutorialScene: SKScene {
         
         
         
-    }
 }
