@@ -12,6 +12,7 @@ import GameplayKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entities = [GKEntity]()
+    var allowJump = true
     var graphs = [String : GKGraph]()
     var fabiano = CharachterSceneElement()
     var gameViewController: GameViewController!
@@ -207,6 +208,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 gameViewController.cut = true
             }
          }
+        
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "Ground"){
+                print("Tocou no chao")
+                allowJump = true
+            }
+        }
     }
     
 }

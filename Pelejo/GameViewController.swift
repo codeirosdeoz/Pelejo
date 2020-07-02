@@ -95,9 +95,14 @@ class GameViewController: UIViewController {
     
 
     @objc func tapHandler(sender:UITapGestureRecognizer){
-        sceneNode.jumpFabiano()
-
-     }
+        print("one tap")
+        if sceneNode.allowJump == true{
+            sceneNode.jumpFabiano()
+            sceneNode.allowJump = false
+            print("Saiu do chao")
+        }
+        
+    }
     
     @IBAction func actionButton() {
         sceneNode.fabiano.animateKnifeAttack()
