@@ -23,6 +23,8 @@
 		8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */; };
 		8602C7DE24A44506002F963A /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8602C7DD24A44506002F963A /* ChaptersViewController.swift */; };
 		865B14E724AC271B00F5DE80 /* BirdClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865B14E624AC271B00F5DE80 /* BirdClass.swift */; };
+		86F8A9A424AD23F400D89E4A /* TutorialScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F8A9A324AD23F400D89E4A /* TutorialScene.swift */; };
+		86F8A9A624AD248D00D89E4A /* TutorialScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 86F8A9A524AD248D00D89E4A /* TutorialScene.sks */; };
 		A7A346C824A5D53A00C9270B /* Underdog-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */; };
 		A7A346C924A5D53A00C9270B /* Xilo-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		8602C7DB24A4444D002F963A /* ChapterStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStoryViewController.swift; sourceTree = "<group>"; };
 		8602C7DD24A44506002F963A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		865B14E624AC271B00F5DE80 /* BirdClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdClass.swift; sourceTree = "<group>"; };
+		86F8A9A324AD23F400D89E4A /* TutorialScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialScene.swift; sourceTree = "<group>"; };
+		86F8A9A524AD248D00D89E4A /* TutorialScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TutorialScene.sks; sourceTree = "<group>"; };
 		A7A346C624A5D53900C9270B /* Underdog-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Underdog-Regular.ttf"; path = "Pelejo/Fonts/Underdog-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		A7A346C724A5D53A00C9270B /* Xilo-Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Xilo-Sans.ttf"; path = "Pelejo/Fonts/Xilo-Sans.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -135,6 +139,8 @@
 				28FA554624A5AB020077747D /* MovimentClass.swift */,
 				865B14E624AC271B00F5DE80 /* BirdClass.swift */,
 				28FA554824A5AB470077747D /* CharachterSceneElement.swift */,
+				86F8A9A324AD23F400D89E4A /* TutorialScene.swift */,
+				86F8A9A524AD248D00D89E4A /* TutorialScene.sks */,
 			);
 			path = Pelejo;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			files = (
 				8602C7AD24A42946002F963A /* Main.storyboard in Resources */,
 				8602C7A424A42946002F963A /* GameScene.sks in Resources */,
+				86F8A9A624AD248D00D89E4A /* TutorialScene.sks in Resources */,
 				A7A346C924A5D53A00C9270B /* Xilo-Sans.ttf in Resources */,
 				8602C7AF24A42947002F963A /* Assets.xcassets in Resources */,
 				A7A346C824A5D53A00C9270B /* Underdog-Regular.ttf in Resources */,
@@ -310,6 +317,7 @@
 				8602C7DC24A4444D002F963A /* ChapterStoryViewController.swift in Sources */,
 				8602C7A224A42946002F963A /* AppDelegate.swift in Sources */,
 				8602C7D624A44125002F963A /* InitialPageViewController.swift in Sources */,
+				86F8A9A424AD23F400D89E4A /* TutorialScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

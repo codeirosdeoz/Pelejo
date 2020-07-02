@@ -19,6 +19,7 @@ class GameViewController: UIViewController {
     var textNumberBranches = UITextView(frame: CGRect(x: 10, y: 0, width: 100, height: 100))
     var cactosDestroyed = 5
     var cut = false
+    @IBOutlet weak var knifeCutButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,10 +72,12 @@ class GameViewController: UIViewController {
         let spriteNode = sceneNode.fabiano.elementBody as! SKSpriteNode
         
         if (sceneNode.fabiano.isHoldingKnife){
+            knifeCutButton.isHidden = true
             spriteNode.texture = SKTexture(imageNamed: "WalkFabFront/0")
             sceneNode.fabiano.elementBody.xScale = sceneNode.fabiano.elementBody.xScale / 1.4
             sceneNode.fabiano.isHoldingKnife = false
         }else{
+            knifeCutButton.isHidden = false
             spriteNode.texture = SKTexture(imageNamed: "WalkFabKnife/0")
             sceneNode.fabiano.elementBody.xScale = sceneNode.fabiano.elementBody.xScale * 1.4
             sceneNode.fabiano.isHoldingKnife = true

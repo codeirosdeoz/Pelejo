@@ -292,6 +292,9 @@ Que abrigo oferecia</string>
                         <viewLayoutGuide key="safeArea" id="dr3-6g-bFJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="GAL-Hh-J6H"/>
+                    <connections>
+                        <outlet property="knifeCutButton" destination="lTc-Yg-YzV" id="Wc4-1f-2p0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4o-iC-mLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
