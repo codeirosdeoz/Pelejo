@@ -270,11 +270,21 @@ Que abrigo oferecia</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4r-IV-QA3">
-                                <rect key="frame" x="750" y="282" width="82" height="82"/>
+                                <rect key="frame" x="786" y="282" width="82" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button_knife"/>
                                 <connections>
                                     <action selector="knifebutton" destination="zWG-8f-kO6" eventType="touchUpInside" id="vNH-t2-jCW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-Yg-YzV">
+                                <rect key="frame" x="692" y="321" width="83" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cloth_dark">
+                                    <color key="titleColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton" destination="zWG-8f-kO6" eventType="touchUpInside" id="M03-U2-Hd9"/>
                                 </connections>
                             </button>
                         </subviews>

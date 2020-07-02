@@ -23,16 +23,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var birdsNodes: [SKNode] = []
     var birds: [BirdClass] = []
     var destroyableCactus: [SKNode] = []
-   
-    
-    
-    
+
     override func sceneDidLoad() {
         
         self.lastUpdateTime = 0
         
         birdsNodes = self["Bird"]
-        destroyableCactus = self["DestroyableCactus"]
+        //destroyableCactus = self["DestroyableCactus"]
         
         for i in birdsNodes{
             birds.append(BirdClass(node: i))
@@ -55,16 +52,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             i.animateFly()
         }
         
-        for i in destroyableCactus {
+        /*for i in destroyableCactus {
             i.isUserInteractionEnabled = true
-            
-        }
+        }*/
+        destroyableCactus.append((childNode(withName: "DestroyableCactus2"))!)
+        destroyableCactus.append((childNode(withName: "DestroyableCactus1"))!)
         
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
         fabiano.loadFrontWalkTextureArray(folderName: "WalkFabFront", numberOfTextures: 6)
         fabiano.loadBackWalkTextureArray(folderName: "WalkFabBack", numberOfTextures: 6)
         fabiano.loadKnifeWalkTextureArray(numberOfTextures: 5)
         fabiano.loadKnifeAttackTextureArray(numberOfTextures: 4)
+        
     }
     
     func moveFabiano(swipe:UISwipeGestureRecognizer){
@@ -139,9 +138,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Implementação de funÇão do protocolo SKPhysicsContactDelegate que é chamada quando há colisão entre elementos de uma msm mask
     func didBegin(_ contact: SKPhysicsContact) {
-        print("Collison detected")
+        //print("Collison detected")
     
-        
+
         if let node = contact.bodyA.node?.name as! String? {
             if(node  == "Branch"){
                 gameViewController.collectedBranches+=1
@@ -191,6 +190,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 gameViewController.collectedBranches = 0
                 gameViewController.textNumberBranches.text = "Colected branches: " + String(gameViewController.collectedBranches)
                 gameViewController.restart()
+            }
+         }
+        
+        if let node = contact.bodyA.node?.name as! String? {
+            if(node  == "cacto"){
+                //print("cacto")
+                if( fabiano.isHoldingKnife == true && gameViewController.cactosDestroyed > 0){
+                    destroyableCactus[gameViewController.cactosDestroyed-1].isHidden = true
+                    //print("entrou")
+                    //print(gameViewController.cactosDestroyed)
+                    //gameViewController.cactosDestroyed-=1
+                }
+            }
+        }
+            
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "cacto"){
+                //print("cacto")
+                if(fabiano.isHoldingKnife == true && gameViewController.cactosDestroyed > 0){
+                   destroyableCactus[gameViewController.cactosDestroyed-1].isHidden = true
+                    //print("entrou")
+                    //print(gameViewController.cactosDestroyed)
+                    //gameViewController.cactosDestroyed-=1
+                }
             }
          }
     }

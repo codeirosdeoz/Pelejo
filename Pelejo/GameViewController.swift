@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
 
     var collectedBranches = 0
     var textNumberBranches = UITextView(frame: CGRect(x: 10, y: 0, width: 100, height: 100))
+    var cactosDestroyed = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +99,12 @@ class GameViewController: UIViewController {
 //
 //     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @IBAction func actionButton() {
+        sceneNode.fabiano.animateKnifeAttack()
+        
+    }
+    
+    /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touchLocation = touches.first!.location(in: sceneNode)
         var aux = false
         
@@ -107,13 +113,18 @@ class GameViewController: UIViewController {
 //        print(touchedNode)
         
         for i in touchedNode{
-            if (i.name == "DestroyableCactus") {
+            if (i.name == "cacto") {
                 aux = true
             }
         }
 
         if (aux) {
             sceneNode.fabiano.animateKnifeAttack()
+            if(self.cactosDestroyed > 0){
+                self.cactosDestroyed-=1
+            }
+            print(self.cactosDestroyed)
+            print("touched cactos")
 
        }else{
            sceneNode.jumpFabiano()
@@ -122,7 +133,7 @@ class GameViewController: UIViewController {
 
 
 
-    }
+    }*/
     
     override var shouldAutorotate: Bool {
         return true
