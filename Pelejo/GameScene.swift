@@ -12,6 +12,7 @@ import GameplayKit
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var entities = [GKEntity]()
+    var allowJump = true
     var graphs = [String : GKGraph]()
     var fabiano = CharachterSceneElement()
     var gameViewController: GameViewController!
@@ -23,16 +24,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var birdsNodes: [SKNode] = []
     var birds: [BirdClass] = []
     var destroyableCactus: [SKNode] = []
-   
-    
-    
-    
+
     override func sceneDidLoad() {
         
         self.lastUpdateTime = 0
         
         birdsNodes = self["Bird"]
-        destroyableCactus = self["DestroyableCactus"]
+        //destroyableCactus = self["DestroyableCactus"]
         
         for i in birdsNodes{
             birds.append(BirdClass(node: i))
@@ -54,10 +52,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             i.flyLeft()
             i.animateFly()
         }
-        
-        for i in destroyableCactus {
-            i.isUserInteractionEnabled = true
-            
+        var i = 1
+        while(i<6){
+            destroyableCactus.append((childNode(withName: "DestroyableCactus\(i+1)"))!)
+            i+=1
         }
         
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
@@ -65,6 +63,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         fabiano.loadBackWalkTextureArray(folderName: "WalkFabBack", numberOfTextures: 6)
         fabiano.loadKnifeWalkTextureArray(numberOfTextures: 5)
         fabiano.loadKnifeAttackTextureArray(numberOfTextures: 4)
+        
     }
     
     func moveFabiano(swipe:UISwipeGestureRecognizer){
@@ -136,12 +135,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return result
     }
 
+    func cutting(){
+        
+    }
     
     //Implementação de funÇão do protocolo SKPhysicsContactDelegate que é chamada quando há colisão entre elementos de uma msm mask
     func didBegin(_ contact: SKPhysicsContact) {
-        print("Collison detected")
+        //print("Collison detected")
     
-        
+
         if let node = contact.bodyA.node?.name as! String? {
             if(node  == "Branch"){
                 gameViewController.collectedBranches+=1
@@ -193,6 +195,27 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 gameViewController.restart()
             }
          }
+        
+        if let node = contact.bodyA.node?.name as! String? {
+            if(node  == "cacto"){
+                gameViewController.cut = true
+            }
+        }
+            
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "cacto"){
+                gameViewController.cut = true
+            }
+         }
+        
+        if let node = contact.bodyB.node?.name as! String?{
+            
+            if(node == "Ground"){
+                print("Tocou no chao")
+                allowJump = true
+            }
+        }
     }
     
 }

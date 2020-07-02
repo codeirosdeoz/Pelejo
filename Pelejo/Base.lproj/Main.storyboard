@@ -270,8 +270,8 @@ Que abrigo oferecia</string>
                                 <state key="normal" backgroundImage="button_pause"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4r-IV-QA3">
-                                <rect key="frame" x="750" y="282" width="82" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <rect key="frame" x="786" y="282" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="button_knife"/>
                                 <connections>
                                     <action selector="knifebutton" destination="zWG-8f-kO6" eventType="touchUpInside" id="vNH-t2-jCW"/>
@@ -311,6 +311,16 @@ Que abrigo oferecia</string>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTc-Yg-YzV">
+                                <rect key="frame" x="692" y="321" width="83" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="cloth_dark">
+                                    <color key="titleColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButton" destination="zWG-8f-kO6" eventType="touchUpInside" id="M03-U2-Hd9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dr3-6g-bFJ"/>
@@ -320,6 +330,7 @@ Que abrigo oferecia</string>
                         <outlet property="actionKnifeButton" destination="G4r-IV-QA3" id="OGd-nz-rI6"/>
                         <outlet property="missionButton" destination="ste-AZ-2Aq" id="AAu-xk-ceh"/>
                         <outlet property="pauseButton" destination="Lyf-oi-BVa" id="S3y-Cp-aiY"/>
+                        <outlet property="knifeCutButton" destination="lTc-Yg-YzV" id="Wc4-1f-2p0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M4o-iC-mLJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

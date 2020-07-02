@@ -11,7 +11,7 @@ import SpriteKit
 class MovimentClass{
     
     public var xMovimentVariation:CGFloat = 200 //BULAA NESSA VARIÁVEL PRA MUDAR A VELOCIDADE EM QUE O HOMI ANDA
-    public var yJumpVariation:CGFloat = 400
+    public var yJumpVariation:CGFloat = 1000
     public var interval:TimeInterval = 0.5
     
     func moveLeft(body:SKNode){
