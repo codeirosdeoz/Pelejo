@@ -18,6 +18,10 @@ class GameViewController: UIViewController {
     var collectedBranches = 0
     var textNumberBranches = UITextView(frame: CGRect(x: 10, y: 0, width: 100, height: 100))
     
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var missionButton: UIButton!
+    @IBOutlet weak var actionKnifeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

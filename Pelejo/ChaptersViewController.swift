@@ -12,8 +12,16 @@ import UIKit
 class ChaptersViewController: UIViewController{
     
     //var chapterAvailable: bool[]
+    @IBOutlet weak var chapterTitle: UILabel!
+    @IBOutlet weak var chapterMap: UIView!
+    @IBOutlet weak var background: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        background.centerXAnchor.constraint(equalTo:
+            self.view.centerXAnchor).isActive = true
+        background.centerYAnchor.constraint(equalTo:
+            self.view.centerYAnchor).isActive = true
     }
 }
