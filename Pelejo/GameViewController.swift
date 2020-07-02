@@ -26,12 +26,12 @@ class GameViewController: UIViewController {
         rightSwipe.cancelsTouchesInView = false
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeHandler))
         leftSwipe.cancelsTouchesInView = false
-        //let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
         rightSwipe.direction = .right
         leftSwipe.direction = .left
         view.addGestureRecognizer(rightSwipe)
         view.addGestureRecognizer(leftSwipe)
-        //view.addGestureRecognizer(tap)
+        view.addGestureRecognizer(tap)
         
         textNumberBranches.text = "Colected branches: " + String(collectedBranches)
         textNumberBranches.backgroundColor = nil
@@ -93,11 +93,10 @@ class GameViewController: UIViewController {
     }
     
 
-//    @objc func tapHandler(sender:UITapGestureRecognizer){
-//        sceneNode.jumpFabiano()
-//
-//
-//     }
+    @objc func tapHandler(sender:UITapGestureRecognizer){
+        sceneNode.jumpFabiano()
+
+     }
     
     @IBAction func actionButton() {
         sceneNode.fabiano.animateKnifeAttack()
