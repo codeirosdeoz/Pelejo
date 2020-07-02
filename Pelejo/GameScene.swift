@@ -51,12 +51,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             i.flyLeft()
             i.animateFly()
         }
-        
-        /*for i in destroyableCactus {
-            i.isUserInteractionEnabled = true
-        }*/
-        destroyableCactus.append((childNode(withName: "DestroyableCactus2"))!)
-        destroyableCactus.append((childNode(withName: "DestroyableCactus1"))!)
+        var i = 1
+        while(i<6){
+            destroyableCactus.append((childNode(withName: "DestroyableCactus\(i+1)"))!)
+            i+=1
+        }
         
         fabiano.elementBody = self.childNode(withName: "Fabiano")!
         fabiano.loadFrontWalkTextureArray(folderName: "WalkFabFront", numberOfTextures: 6)
@@ -135,6 +134,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return result
     }
 
+    func cutting(){
+        
+    }
     
     //Implementação de funÇão do protocolo SKPhysicsContactDelegate que é chamada quando há colisão entre elementos de uma msm mask
     func didBegin(_ contact: SKPhysicsContact) {
@@ -195,26 +197,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if let node = contact.bodyA.node?.name as! String? {
             if(node  == "cacto"){
-                //print("cacto")
-                if( fabiano.isHoldingKnife == true && gameViewController.cactosDestroyed > 0){
-                    destroyableCactus[gameViewController.cactosDestroyed-1].isHidden = true
-                    //print("entrou")
-                    //print(gameViewController.cactosDestroyed)
-                    //gameViewController.cactosDestroyed-=1
-                }
+                gameViewController.cut = true
             }
         }
             
         if let node = contact.bodyB.node?.name as! String?{
             
             if(node == "cacto"){
-                //print("cacto")
-                if(fabiano.isHoldingKnife == true && gameViewController.cactosDestroyed > 0){
-                   destroyableCactus[gameViewController.cactosDestroyed-1].isHidden = true
-                    //print("entrou")
-                    //print(gameViewController.cactosDestroyed)
-                    //gameViewController.cactosDestroyed-=1
-                }
+                gameViewController.cut = true
             }
          }
     }

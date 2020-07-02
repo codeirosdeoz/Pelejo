@@ -17,7 +17,8 @@ class GameViewController: UIViewController {
 
     var collectedBranches = 0
     var textNumberBranches = UITextView(frame: CGRect(x: 10, y: 0, width: 100, height: 100))
-    var cactosDestroyed = 2
+    var cactosDestroyed = 5
+    var cut = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +67,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func knifebutton() {
-        print("knife")
+        //print("knife")
         let spriteNode = sceneNode.fabiano.elementBody as! SKSpriteNode
         
         if (sceneNode.fabiano.isHoldingKnife){
@@ -83,12 +84,12 @@ class GameViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("end")
+        //print("end")
         sceneNode.stopFabiano()
     }
     
     @objc func swipeHandler(sender:UISwipeGestureRecognizer){
-        print("swipe")
+        //print("swipe")
         sceneNode.moveFabiano(swipe: sender)
     }
     
@@ -100,7 +101,14 @@ class GameViewController: UIViewController {
     
     @IBAction func actionButton() {
         sceneNode.fabiano.animateKnifeAttack()
-        
+        print(self.cactosDestroyed)
+        if(self.cut == true && self.cactosDestroyed > 0){
+            sceneNode.destroyableCactus[self.cactosDestroyed-1].isHidden = true
+            self.cactosDestroyed-=1
+        }
+        else{
+            self.cut = false
+        }
     }
     
     /*override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
